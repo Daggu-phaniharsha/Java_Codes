@@ -1,0 +1,137 @@
+package java_awesome;
+
+public class Task 
+{
+	static String  s="Hello";
+	void meth1()
+	{ 
+		int i=50;
+		int j=100;
+		System.out.println("meth1 called");
+		i++;
+		System.out.println("post increment val:"+i);
+		++i;
+		System.out.println("pre increment val:"+i);
+		j--;
+		System.out.println("post decrement val:"+j);
+		--j;
+		System.out.println("pre decrement val:"+j);	
+		 System.out.println("-------------------------");
+	}
+	int meth2(int c,int d)
+	{ 
+		boolean isequal = c==d;
+		boolean isgreater = c>d;
+		boolean islessthan =c<d;
+		boolean isnotequal = c!=d;
+		System.out.println("Is Equal:"+isequal );
+		System.out.println("Is Greater:"+isgreater );
+		System.out.println("Is LessThan:"+islessthan );
+		System.out.println("Is Not Equal:"+isnotequal );
+		System.out.println("------------------------------");
+		return 50;
+	}
+	
+	public void meth3(int x,int y)
+	{
+		System.out.println("meth2 called");
+		System.out.println("x val:"+x);
+		System.out.println("y val:"+y);
+		System.out.println("Add:"+(x+y));
+		System.out.println("Sub:"+(x-y));
+		System.out.println("Mul:"+(x*y));
+		System.out.println("Div:"+(x/y));
+		System.out.println("-------------------------------");
+	}
+	public  void meth4()
+	{
+		Object a=7;
+		System.out.println("hash code:"+a.hashCode());
+		System.out.println("EQUALS:"+a.equals(a));
+		System.out.println("GetClass:"+a.getClass());
+		System.out.println("TOSTRING:"+a.toString());
+		System.out.println("==============================");
+	}
+	void implict()
+	{
+		System.out.println("Implict Typecasting\n");
+		char c='M';
+		int  i=c;
+		System.out.println("char PDT c:"+c);
+		System.out.println("int PDT i:"+i);
+		System.out.println("*****************************");
+	}
+	void explict()
+	{
+		System.out.println("Explict Typecasting\n");
+		int i1=80;
+		char c1=(char)i1;
+		System.out.println("int PDT i1: "+i1);
+		System.out.println("char PDT c1:"+c1);
+		System.out.println("********************************");
+	}
+	static void meth()
+	{
+		int x=10;
+		System.out.println("static meth called");
+		System.out.println("x:"+x);
+		System.out.println("============================");
+	}
+	Task()
+	{
+		System.out.println("static var:"+s);
+		System.out.println("Logical meth called");
+		boolean a=true , b=false;
+		boolean logicalAnd = a&&b;
+		boolean logicalOR = a||b;
+		boolean logicalNOT = !a;
+		System.out.println("logical AND:"+logicalAnd);
+		System.out.println("logical OR:"+logicalOR);
+		System.out.println("logical NOT:"+logicalNOT);
+		System.out.println("----------------------------------");
+	}
+	Task(String s)
+	{
+		System.out.println("\n My name is "+s);
+		System.out.println("*******************");
+	}
+	public void autoboxing()
+	{
+		System.out.println("\nAuto Boxing");
+		char c='A';
+		Character cval=Character.valueOf(c);
+		System.out.println("\n char PDT c:"+c);
+		System.out.println("character WCO cval:"+cval);
+		System.out.println("========================");
+		
+	}
+	void autounboxing()
+	{ 
+		System.out.println("Auto Unboxing");
+		
+		Float floatval=new Float(10.9f);
+		Float f=floatval.floatValue();
+		System.out.println("Float PDT:"+f);
+		System.out.println("--------------------------");
+			
+	}
+	
+	public static void main(String[] args)
+	{
+		Task obj=new Task();
+		obj.meth1();
+		obj.meth2(25,75);
+		obj.meth3(30, 5);
+		obj.meth4();
+		obj.implict();
+		obj.explict();
+		Task.meth();
+		new Task("Phani Harsha");
+		obj.autoboxing();
+		obj.autounboxing();
+		
+		
+		
+	}
+
+}
